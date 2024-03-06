@@ -3,7 +3,10 @@ import os
 
 application = Flask(__name__)
 
-application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
+# application.config['SECRET_KEY'] = os.environ['SECRET_KEY'] 
+# in terminal --> python --> import os --> os.urandom(24) hex() 
+
+application.config['SECRET_KEY'] = '35b7661ed7405d6fa32ab31bdb5aaf5e2e6b17ee10a4380f' 
 
 from capp.home.routes import home
 from capp.methodology.routes import methodology
