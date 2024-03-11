@@ -43,28 +43,30 @@
           <div class="container">
             <div class="carbon_app_navbar">
               <h1 class="logo">
-                <span class="text-logo"><i class="fa-solid fa-leaf">
-                </i> Carbon</span> App
+                <a href="/">
+                <span class="text-logo"><i class="bi bi-droplet"></i> Footprint</span> <span style="font-size: 35px;">App</span>
+                </a>
               </h1>
-              <nav>
+              <div class="carbon_app_navbar_ul">
                 <ul>
                     <li>
-                      <a href="{{url_for('users.register')}}">Register</a>
+                        <a href="{{url_for('methodology.methodology_home')}}"><i class="bi bi-paperclip"></i>Methodology</a>
                     </li>
                     <li>
-                      <a href="{{url_for('users.login')}}">Login</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('home.home_home')}}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+                        <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="bi bi-calculator"></i>Carbon App</a>
                     </li>
                 </ul>
-              </nav> 
+              </div>
+              <nav> 
+                <div class="btn_nav">
+                  <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-signpost"></i> Register</a>
+                </div>
+              </nav>
+              <nav> 
+                <div class="btn_nav">
+                  <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+                </div>
+              </nav>
             </div>
           </div>
         </section>

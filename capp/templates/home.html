@@ -3,10 +3,14 @@
 
 <!-- Header -->
 <section class="section_header_home">
-  <div class="container">
 
     <div class="header_home">
-      <div class="box"> 
+      <img class="header_home" src="{{url_for('static', filename='pictures/bilde.jpg')}}" alt="">
+      <div class="overlay_text">
+        <br>
+        <br>
+        <br>
+        <div class="container"> 
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
@@ -17,9 +21,13 @@
             {% endif %}
         {% endwith %}
         <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
-        <p style="text-align:left;">
-           Welcome to CARBONAPP! We are proud to present for you a new and innovative way to measure your carbon footprint. 
+
+        <p style="text-align:center;">
+          In this webpage we have presented the consept and the background for creating this website. In this website we have done resarch about carbon emissions and
+          green digitalization, which we have developed into an paper. From this paper, we have developed an carbon emissions app, which can help users 
+          to calulcate their carbon emissions, based on their type of transport vechile, and the distance. 
         </p>
+        </div>
         <div class="container_buttons_links_header_home">
           <div class="btn">
               <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Register</a>
@@ -29,52 +37,72 @@
           </div>
         </div>  
       </div>
-      <div class="box">
-        <img 
-          src="{{url_for('static', filename='icons/carbon_app.svg')}}"
-          width="325" 
-          height="325"
-          alt=""/>
-      </div>
+      
     </div>
 
   </div>
 </section> 
+
 
 <!-- Developers -->
 <section class="section_developers">
   <div class="container">
 
     <div class="developers" style="display:block;">
-      <h1 style="text-align:center;"> Our Team</h1>
+      <h1 style="text-align:center;"><span class="text-logo">Our Team</span></h1>
       <p>
-        Our team of economists and developers consists of eight passionate students, all with the same goal: to make you unconsiously conscious. 
+        The team which have developed the carbon app and written the methodology 
+        in the course "Green digitalization and App Development" are:      
       </p>      
     </div>
 
     <div class="developers">
         <div class="box">
-          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="" style="border-radius: 50%; width:200px;">
-          <h3>Developer 1</h3>
-          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+          <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+          <h2>Developer 1</h2>
+          <p> My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
+          </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+          </div> 
+          
+        </div>
+        <div class="box">
+          <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+          <h3>Developer 2</h3>
+          <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
           </p>
           <div class="section_container_buttons_developers">
             <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
           </div> 
         </div>
+
         <div class="box">
-          <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="" style="border-radius: 50%; width:200px;">
-          <h3>Developer 2</h3>
-          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+          <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+          <h3>Developer 3</h3>
+          <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
           </p>
           <div class="section_container_buttons_developers">
             <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
           </div> 
-        </div>           
+        </div>   
+
         <div class="box">
-          <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="" style="border-radius: 50%; width:200px;">
-          <h3>Developer 3</h3>
-          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+          <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+          <h3>Developer 4</h3>
+          <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
           </p>
           <div class="section_container_buttons_developers">
             <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
@@ -83,27 +111,59 @@
     </div>
 
     <div class="developers">
+
       <div class="box2">
-        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" style="border-radius: 50%; width:200px;">
-        <h3>Developer 4</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
+        <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+        <h3>Developer 5</h3>
+        <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
+          </p>
         <div class="section_container_buttons_developers">
           <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
         </div> 
       </div>
+
       <div class="box2">
-        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="" style="border-radius: 50%; width:200px;">
-        <h3>Developer 5</h3>
-        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
-        </p>
+        <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+        <h3>Developer 6</h3>
+        <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
+          </p>
         <div class="section_container_buttons_developers">
           <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
         </div> 
-      </div>           
-      <div class="box2">
+      </div>
 
-      </div>     
+      <div class="box2">
+        <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+        <h3>Developer 7</h3>
+        <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
+          </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+        </div> 
+      </div>  
+
+      <div class="box2">
+        <img src="{{url_for('static',filename='pictures/Filip2.jpeg')}}" alt="" style="border-radius: 50%; width:200px; margin: 5px 5px;">
+        <h3>Developer 8</h3>
+        <p>  My name is Filip Framstad and i am 20 years old from Ålesund. I'm taking a one year 
+            study in "Digital Økonomi og Ledelse". I also work part time at 
+            Sparebanken Sogn og Fjordane. In my spare time i like to work out, where 
+            i run and lift weights pretty much every day. 
+          </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+        </div> 
+      </div>   
+
   </div>
 
   </div>          
