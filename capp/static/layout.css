@@ -89,6 +89,22 @@ img {
   border-radius: 5px;
   flex-direction: row;
 }
+.carbon_app_navbar_ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none; /* You can alsp use the .ul in the CSS utilities, same principle, just that the "rules" which you include there are common for the whole of "ul", and not just navbar.ul */
+  align-items: center;
+  justify-content: center;
+}
+ul{
+  flex-direction: row;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+}
 
 
 /* Footer  */

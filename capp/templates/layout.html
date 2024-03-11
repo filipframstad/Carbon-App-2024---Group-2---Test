@@ -47,16 +47,16 @@
                 <span class="text-logo"><i class="bi bi-droplet"></i> Footprint</span> <span style="font-size: 35px;">App</span>
                 </a>
               </h1>
-              <nav> 
-                <div class="btn_nav">
-                  <a href="{{url_for('methodology.methodology_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-paperclip"></i>Methodology</a>
-                </div>
-              </nav>
-              <nav> 
-                <div class="btn_nav">
-                  <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-calculator"></i> Carbon-App</a>
-                </div>
-              </nav>
+              <div class="carbon_app_navbar_ul">
+                <ul>
+                    <li>
+                        <a href="{{url_for('methodology.methodology_home')}}"><i class="bi bi-paperclip"></i>Methodology</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="bi bi-calculator"></i>Carbon App</a>
+                    </li>
+                </ul>
+              </div>
               <nav> 
                 <div class="btn_nav">
                   <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-signpost"></i> Register</a>
