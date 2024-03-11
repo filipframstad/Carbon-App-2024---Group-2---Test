@@ -22,4 +22,3 @@ def login():
         flash('Login Unsuccessful. Please check email and password!', 'danger')  
   return render_template('users/login.html', title='login', form=form)
 
-
