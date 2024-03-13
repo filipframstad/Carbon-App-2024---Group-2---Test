@@ -20,16 +20,16 @@ ol {
 }
 /* Section header */
 .section_header_methodology {
-  background-color:#2a4359;
+  background-color:#4c4b18;
 }
 .header {
   display: flex;  
   align-items: start;
-  background: #2a4359;
+  background: #4c4b18;
 }
 .header .box {
   flex: 1;
-  background: #2a4359;
+  background: #4c4b18;
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -64,17 +64,20 @@ ol {
 }
 /* Section methodology */
 .section_body_methodology {
-  background-color:#466fa6;
+  background-color:#fff;
 }
 .methodology {
   display: flex;  
   align-items: start;
-  background: #466fa6;
+  background: #fff;
 }
+
+
+
 /* Table with one column */
 .methodology .box_table1 {
   flex: 1;
-  background: #8badd9;
+  background: #F5EFE6;
   color: black;
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
@@ -85,19 +88,19 @@ ol {
 }
 .methodology .box_table1:nth-of-type(1) {
   flex-grow:1;
-  background: #466fa6;
+  background: #F5EFE6;
 }
 .methodology .box_table1:nth-of-type(2) {
   flex-grow:4;
 }
 .methodology .box_table1:nth-of-type(3) {
   flex-grow:1;
-  background: #466fa6;
+  background: #F5EFE6;
 }
 /* Table with two columns */
 .methodology .box_table2 {
   flex: 1;
-  background: #8badd9;
+  background: #F5EFE6;
   color: black;
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
@@ -108,11 +111,11 @@ ol {
 }
 .methodology .box_table2:nth-of-type(1) {
   flex-grow:1;
-  background: #8badd9;
+  background: #F5EFE6;
 }
 .methodology .box_table2:nth-of-type(2) {
   flex-grow:1;
-  background: #8badd9;
+  background: #F5EFE6;
 }
 
 
