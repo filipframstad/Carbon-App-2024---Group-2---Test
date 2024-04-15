@@ -31,6 +31,10 @@
       <!-- To activate media queries in devices -->
       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
 
+      <!--For the plots-->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
         {% if title %}
             <title>{{ title }}</title>
         {% else %}
@@ -47,26 +51,46 @@
                 <span class="text-logo"><i class="bi bi-droplet"></i> Footprint</span> <span style="font-size: 35px;">App</span>
                 </a>
               </h1>
-              <div class="carbon_app_navbar_ul">
-                <ul>
-                    <li>
-                        <a href="{{url_for('methodology.methodology_home')}}"><i class="bi bi-paperclip"></i>Methodology</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="bi bi-calculator"></i>Carbon App</a>
-                    </li>
-                </ul>
-              </div>
-              <nav> 
-                <div class="btn_nav">
-                  <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-signpost"></i> Register</a>
+              {% if current_user.is_authenticated %}
+                <div class="carbon_app_navbar_ul">
+                  <nav>
+                    <ul>
+                        <li>
+                          <a href="{{url_for('users.logout')}}">Logout</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('home.home_home')}}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('methodology.methodology_home')}}"><i class="bi bi-paperclip"></i>Methodology</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="bi bi-calculator"></i>Carbon App</a>
+                        </li>
+                    </ul>
+                  </nav> 
+                  {% else %}
+                  <nav>
+                    <ul>
+                        <li>
+                          <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-signpost"></i> Register</a>
+                        </li>
+                        <li>
+                          <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('home.home_home')}}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('methodology.methodology_home')}}">Methology</a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+                        </li>
+                    </ul>
+                  </nav>
                 </div>
-              </nav>
-              <nav> 
-                <div class="btn_nav">
-                  <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-box-arrow-in-right"></i> Login</a>
-                </div>
-              </nav>
+              {% endif %}
             </div>
           </div>
         </section>
