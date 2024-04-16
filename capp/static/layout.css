@@ -28,7 +28,7 @@ ul {
   font-size: 400;
 }
 a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 h1, h2 {
@@ -70,7 +70,7 @@ img {
   font-weight: 400;
 }
 .text-logo {
-  color: #568c63;
+  color: #fff;
   flex: auto;
   font-size: 35px;
 }

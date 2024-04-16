@@ -54,63 +54,58 @@
 <section class="section_header_methodology">
 
     <div class="header_methodology">
-      <img class="img-home" src="{{url_for('static', filename='pictures/Methodology1.jpeg')}}" alt="">
-      <section class="section_carbon_app_navbar1" >
-        <div class="container1">
+      <section class="section_home_navbar" >
+        <div class="container">
           <div class="carbon_app_navbar1">
-            <h1 class="logo">
+            <div class="logo">
               <a href="/">
-              <span class="text-logo"><i class="bi bi-droplet"></i> Footprint</span> <span style="font-size: 35px;">App</span>
+              <span class="text-logo">FOOTPRINT</span>
               </a>
-            </h1>
-            <div class="carbon_app_navbar_ul">
+            </div>
+            <div class="carbon_app_navbar_ul1">
               <ul>
                   <li>
-                      <a href="{{url_for('methodology.methodology_home')}}"><i class="bi bi-paperclip"></i>Methodology</a>
+                      <a href="{{url_for('carbon_app.carbon_app_home')}}">Product</a>
                   </li>
                   <li>
-                      <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="bi bi-calculator"></i>Carbon App</a>
+                      <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                  </li>
+                  <li>
+                    <a href="/">Partnerships</a>
+                  </li>
+                  <li>
+                    <a href="{{url_for('about.about_home')}}">About</a>
                   </li>
               </ul>
             </div>
-            <nav> 
-             <div class="btn_nav1">
-                <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-signpost"></i> Register</a>
-            </div>
-            </nav>
-            <nav> 
+            <div class="nav-right"> 
               <div class="btn_nav1">
-                <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#568c63; color:#fff; justify-content:right; border: none;"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+                <a href="{{url_for('users.login')}}">Sign in</a>
                </div>
-            </nav>
+               <div class="demo_box">
+               <div class="btn_nav_demo">
+                  <a href="/">Calculator</a>
+               </div>
+              </div>
+              </div>
           </div>
         </div>
       </section>
       <div class="overlay_text">
-        <br>
-        <br>
-        <br>
         <div class="container"> 
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }}">
-                        {{ message }}
-                    </div> 
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-        <h1 style="font-size:65px;"><span class="text-logo-home">About Methodology:</span></h1>
-
-        <p style="text-align:left;">
-            At the heart of our methodology lies an extensive exploration, meticulously documented in a thoughtfully crafted paper. <br> 
-            Immersed in the realms of carbon emissions and green digitalization, this paper serves as the cornerstone of our initiatives. <br> 
-            Leveraging its insights, we proudly unveil our latest innovation: a state-of-the-art carbon emissions app.
-            Engineered to empower <br>users, our app redefines how individuals interact with their environmental impact. Seamlessly integrating factors such as transportation <br>
-            mode and distance, users can effortlessly assess their carbon footprint. 
-            Through this transformative tool, we aspire <br>to instill mindful decision-making and cultivate a sustainable future.
-        </p>
-      </div>
+            <div class="top_home" style="margin-bottom: 0p;">
+            <div class="home_heading">
+            Our Methodology
+            </div>
+          <div class="home_heading_info">
+            <p>
+                Our methodology, outlined in a precise paper, drives our initiatives. Built on carbon emissions and digitalization, it powers our new carbon app, empowering users for sustainable choices.
+          </p>
+          </div>
+          
+          
+        </div>
+        </div>
       
     </div>
 

@@ -20,8 +20,10 @@ ol {
 }
 /* Section header */
 .section_header_methodology {
-  background-color:#4c4b18;
+  background-color:#d4d6d7;
+  height: 450px;
 }
+
 .header {
   display: flex;  
   align-items: start;
