@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Font Awesome code -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!--Import the Bootstrap CSS file:-->
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      />
+
+      <!-- Matjax -->
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+      
+      <!-- CSS code -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='methodology.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
+
+      <!-- To activate media queries in devices -->
+      <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
+
+
+        <!-- Bootstrap -->
+        <!-- Question Accordion -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"
+        ></script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+       
+        
+    </head>
+    <body>
+<!-- Header -->
+<section class="section_header_methodology">
+
+    <div class="header_methodology">
+      <section class="section_home_navbar" >
+        <div class="container">
+          <div class="carbon_app_navbar1">
+            <div class="logo">
+              <a href="/">
+              <span class="text-logo">FOOTPRINT</span>
+              </a>
+            </div>
+            <div class="carbon_app_navbar_ul1">
+              <ul>
+                  <li>
+                      <a href="{{url_for('carbon_app.carbon_app_home')}}">Product</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                  </li>
+                  <li>
+                    <a href="/">Partnerships</a>
+                  </li>
+                  <li>
+                    <a href="{{url_for('about.about_home')}}">About</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="nav-right"> 
+              <div class="btn_nav1">
+                <a href="{{url_for('users.login')}}">Sign in</a>
+               </div>
+               <div class="demo_box">
+               <div class="btn_nav_demo">
+                  <a href="/">Calculator</a>
+               </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <div class="overlay_text">
+        <div class="container"> 
+            <div class="top_home" style="margin-bottom: 0p;">
+            <div class="home_heading">
+            Our Methodology
+            </div>
+          <div class="home_heading_info">
+            <p>
+                Our methodology, outlined in a precise paper, drives our initiatives. Built on carbon emissions and digitalization, it powers our new carbon app, empowering users for sustainable choices.
+          </p>
+          </div>
+          
+          
+        </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section> 
+
+<!-- Methodology -->
+<section class="section_body_methodology">
+    <div class="container">
+
+        <div class="methodology" style="display:block;">
+            <h1 style="text-align:left;"> Our numbers and formulas</h1>
+            <p>
+              We are going to studty some \(\LaTeX ~ formulas\) that could be useful for our project:
+            </p> 
+        </div>
+
+        <!--Enumerated list (table with two columns)-->
+        <div class="methodology"> 
+            <div class="box_table2" style="height:200px;">
+                <ol start="1">
+                    <li>
+                        <h4>Mathematical expressions 1</h4>
+                        <p class="text-left">
+                            In progress.
+                            <br>
+                            x
+                        </p>
+                    </li>
+                </ol>                        
+            </div>
+            <div class="box_table2" style="height:200px;">
+                <ol start="2">
+                    <li>
+                        <h4>Mathematical expressions 2</h4>
+                        <p class="text-left">
+                            In progess.
+                            <br>
+                            x
+                        </p>
+                    </li>
+                </ol>
+            </div>  
+        </div>
+
+        <!--Enumerated list (table with two columns)-->
+        <div class="methodology"> 
+            <div class="box_table2" style="height:425px;">
+                <ol start="3">
+                    <li>
+                        <h4>Sums</h4>
+                        <p class="text-left">
+                            In progress.
+                            <br>
+                            x
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Products</h4>
+                        <p class="text-left">
+                            In progress.
+                            <br>
+                            x
+                        </p>
+                    </li>
+                </ol>                        
+            </div>
+            <div class="box_table2" style="height:425px;">
+                <ol start="5">
+                    <li>
+                        <h4>Limits</h4>
+                        <p class="text-left">
+                            In progress.
+                            <br>
+                            x
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Integrals</h4>
+                        <p class="text-left">
+                            In progress.
+                            <br>
+                            x
+                        </p>
+                    </li>
+                </ol>
+            </div>  
+        </div>
+
+        
+
+        <!--Enumerated list (table with one column)-->
+        <div class="methodology">              
+            <div class="box_table1">
+                      
+            </div>
+            <div class="box_table1">
+                <ol>
+                    <li>
+                        <h4>Buses</h4>
+                        <p class="text-left">
+                            x
+                            <br>
+                             x
+                            <br>
+                            Where:
+                            <ul style="text-align:left;">
+                                <li>x</li>
+                                <li>x</li>
+                                <li>x</li>
+                                <li>x </li>
+                            </ul>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Cars</h4>
+                        <p class="text-left">
+                            ...
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Planes</h4>
+                        <p class="text-left">
+                            ...
+                        </p>
+                    </li>
+                </ol>                        
+            </div>
+            <div class="box_table1">
+                      
+            </div>  
+        </div>
+
+        
+      
+    </div>
+</section>
+
+</body>
+</html>
