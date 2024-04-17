@@ -1,4 +1,9 @@
-
+/* Colors 
+Home, section 1 (head, background): #9fa7bf
+Home, section 1 (head, boxes): #568c63
+Home, section 2 (developers, background): #c5c8d9 
+Home, section 2 (developers, boxes): #49736f
+ */
 
 /* Utilities  */
 
@@ -33,7 +38,6 @@ ul{
 }
 
 /* Navbar */
-
 .section_home_navbar {
   background-color: transparent;
 }
@@ -89,14 +93,13 @@ ul{
   flex-direction: row;
   align-items: center;
 }
+    .nav-right .btn_nav1 {
+      margin-right: 30px;
+    }
 
-.nav-right .btn_nav1 {
-  margin-right: 30px;
-}
-
-.nav-right .btn_nav_demo {
-  margin-right: 0;
-}
+    .nav-right .btn_nav_demo {
+      margin-right: 0;
+    }
 
 .btn_nav1 {
   display: flex;
@@ -151,13 +154,9 @@ ul{
   }
 
 .container-one{
-  height: 728px;
+  height: 628px;
   width: auto;
   padding-top: 60px;
-  margin-bottom: 300px;
-  background-color: #171f20; 
-  margin-left: -16px;
-  margin-right: -16px;
 }
 
   .lifestyle-image {
@@ -231,13 +230,13 @@ ul{
   color: #ffff;
 }
 
-
 /* Second section home*/
 
 .home-second-box {
-  height: 700px;
+  height: auto;
   background-color: #c3d0d1;
-  margin-top: 300px;
+  display: block;
+  padding-bottom: 50px;
 }
 
 .small-heading-home2 {
@@ -254,6 +253,77 @@ ul{
   line-height: 75px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.value-prop-text {
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 24px;
+    padding-right: 0;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+
+.heading-1-numbers{
+    margin-top: -13px;
+    margin-left: 0;
+    margin-right: -4px;
+    padding-top: 0;
+    font-size: 129.8px;
+    line-height: 128px;
+}
+
+.text-box-12{
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: transparent;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: minmax(40%, 40%) 60%;
+    grid-auto-columns: 1fr;
+    height: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: grid;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.home_heading_info2{
+  font-size: 40px;
+  width: 80%;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.home-third-box{
+  height: auto;
+  background-color: #f5f50a;
+  padding: 50px;
+}
+
+.yellow-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.big-heading-home3 {
+  width: 75%;
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -274,4 +344,3 @@ ul{
     height: 500px;
   }
 }
-
