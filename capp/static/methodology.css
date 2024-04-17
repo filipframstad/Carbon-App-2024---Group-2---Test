@@ -19,7 +19,8 @@ ol {
 }
 .overlay_text{
   background-color: #171f20;
-  height: 570px
+  height: auto;
+  padding-bottom: 60px;
 }
 
 .header {
@@ -63,7 +64,6 @@ ol {
   align-items:center;
 }
 /* Section methodology */
-
 .demo_box {
   height: 40px;
   width: 105px;
@@ -87,16 +87,15 @@ ol {
   color: lightgray;
   border-bottom: none;
 }
-
 .section_body_methodology {
-  background-color: #c3d0d1;
+  background-color: #e9ebeb;
   padding: 20px;
 }
 
 .methodology {
   display: flex;
   align-items: start;
-  background: #c3d0d1;
+  background: #e9ebeb;
 }
 
 .methodology .row {
@@ -109,7 +108,7 @@ ol {
 
 .methodology .row .box {
   flex: 1;
-  background: #EDFBE0;
+  background: #f3f8f6;
   color: black;
   border-radius: 10px;
   padding: 15px 20px;
@@ -123,7 +122,7 @@ ol {
 
 .methodology .box_table1 {
   flex: 1; /* Equal width for all boxes */
-  background: #EDFBE0;
+  background: #f3f8f6;
   color: black;
   border-radius: 10px;
   margin: 10px; /* Adjust margin */
@@ -138,13 +137,13 @@ ol {
 }
 
 .methodology .box_table1 {
-  background-color: #EDFBE0; /* Green color */
+  background-color: #f3f8f6; /* Green color */
   color: rgb(0, 0, 0); /* Text color */
   border-radius: 5px; /* Rounded corners */
 }
 
 .methodology .box {
-  background-color: #EDFBE0; /* Green color */
+  background-color: #f3f8f6; /* Green color */
   color: rgb(0, 0, 0); /* Text color */
   border-radius: 5px; /* Rounded corners */
 }
@@ -152,11 +151,61 @@ ol {
 
 
 
-@media (max-width:768px) { 
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  ol {
+    font-size: 16px;
+  }
+
+  .section_header_methodology {
+    height: auto;
+    background-color: #171f20;
+  }
+
+  .overlay_text {
+    background-color: #171f20;
+    padding-bottom: 30px;
+  }
+
   .header {
     flex-direction: column;
-  } 
+    align-items: center;
+  }
+
+  .header .box {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .container_buttons_links_header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_buttons_links_header a:hover {
+    color: #2a4359;
+  }
+
+  .container_buttons_links_header .btn {
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+  }
+
   .methodology {
     flex-direction: column;
-  } 
+  }
+
+  .methodology .row {
+    flex-direction: column;
+    width: auto;
+  }
 }

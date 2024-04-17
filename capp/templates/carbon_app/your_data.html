@@ -21,23 +21,6 @@
     </section> 
 
     <!-- Table Section -->
-    <section class="table_main">
-        <div class="container">
-            <div class="box">
-    
-            </div>
-            <div class="box">  
-                {{emissions_by_transport_python_dic}} 
-            </br>
-                {{emission_transport_python_list}}     
-            </br>
-                {{emissions_by_transport}}  
-            </div>
-            <div class="box">
-    
-            </div>
-        </div>
-    </section> 
  
     <!-- Two Emissions Graph Section -->
     <section class="two_emissions_graphs">
@@ -121,17 +104,13 @@
     <script>
         // Emissions
         let emission_transport_data = JSON.parse({{ emissions_by_transport | tojson }})    
-        Chart.scaleService.updateScaleDefaults('linear', {
-                ticks: {
-                    min: 0
-                }
-        });
+        Chart.scaleService.updateScaleDefaults('linear', {ticks: {min: 0}});
     
     
         let emissions_by_transport_chart = new Chart(emissions_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+                labels: ['Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
                     datasets: [{
                         data: emission_transport_data,
                         backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
@@ -196,7 +175,7 @@
         let kms_by_transport_chart = new Chart(kms_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+                labels: ['Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
                     datasets: [{
                         label: "Income Vs Expenses",
                         data: kms_transport_data,

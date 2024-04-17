@@ -3,7 +3,7 @@ from capp.models import Transport
 from capp import db
 from datetime import timedelta, datetime
 from flask_login import login_required, current_user
-from capp.carbon_app.forms import BusForm, CarForm, AirplaneForm, FerryForm, MotorcycleForm, WalkForm
+from capp.carbon_app.forms import BusForm, CarForm, PlaneForm, FerryForm, MotorcycleForm, WalkForm
 from capp.carbon_app.forms import TrainForm
 import json
 
@@ -25,7 +25,6 @@ efch4={'Bus':{'Diesel':0 ,'Biodiesel':0,'Electric':0},
     'Ferry':{'Heavy Fuel Oil':0, 'Electric':0},
     'Motorcycle':{'Gasoline':0,},
     'Train':{'Electric':0, 'Diesel':0},
-    'Bicycle':{'No Fossil Fuel':0},
     'Walk':{'No Fossil Fuel':0}}
 
 
@@ -91,7 +90,7 @@ def new_entry_car():
 @carbon_app.route('/carbon_app/new_entry_plane', methods=['GET','POST'])
 @login_required
 def new_entry_plane():
-    form = AirplaneForm()
+    form = PlaneForm()
     if form.validate_on_submit():
         kms = form.kms.data
         fuel = form.fuel_type.data
@@ -261,8 +260,8 @@ def your_data():
     else:
         emission_transport[4]
 
-    if 'Plane' in second_tuple_elements:
-        index_plane = second_tuple_elements.index('Plane')
+    if 'Airplane' in second_tuple_elements:
+        index_plane = second_tuple_elements.index('Airplane')
         emission_transport[5]=first_tuple_elements[index_plane]
     else:
         emission_transport[5]
@@ -309,8 +308,8 @@ def your_data():
     else:
         kms_transport[4]
 
-    if 'Plane' in second_tuple_elements:
-        index_plane = second_tuple_elements.index('Plane')
+    if 'Airplane' in second_tuple_elements:
+        index_plane = second_tuple_elements.index('Airplane')
         kms_transport[5]=first_tuple_elements[index_plane]
     else:
         kms_transport[5]
