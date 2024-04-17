@@ -1,250 +1,134 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <!-- Font Awesome code -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% extends "layout.html" %}
+{% block content %}
 
-      <!--Import the Bootstrap CSS file:-->
-      <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-      />
-
-      <!-- Matjax -->
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-      
-      <!-- CSS code -->
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='methodology.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
-      <!-- To activate media queries in devices -->
-      <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
-
-
-        <!-- Bootstrap -->
-        <!-- Question Accordion -->
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-          crossorigin="anonymous"
-        ></script>
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-       
-        
-    </head>
-    <body>
-<!-- Header -->
-<section class="section_header_methodology">
-
-    <div class="header_methodology">
-      <section class="section_home_navbar" >
-        <div class="container">
-          <div class="carbon_app_navbar1">
-            <div class="logo">
-              <a href="/">
-              <span class="text-logo">FOOTPRINT</span>
-              </a>
-            </div>
-            <div class="carbon_app_navbar_ul1">
-              <ul>
-                  <li>
-                      <a href="{{url_for('carbon_app.carbon_app_home')}}">Product</a>
-                  </li>
-                  <li>
-                      <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
-                  </li>
-                  <li>
-                    <a href="/">Partnerships</a>
-                  </li>
-                  <li>
-                    <a href="{{url_for('about.about_home')}}">About</a>
-                  </li>
-              </ul>
-            </div>
-            <div class="nav-right"> 
-              <div class="btn_nav1">
-                <a href="{{url_for('users.login')}}">Sign in</a>
-               </div>
-               <div class="demo_box">
-               <div class="btn_nav_demo">
-                  <a href="/">Calculator</a>
-               </div>
-              </div>
-              </div>
-          </div>
-        </div>
-      </section>
-      <div class="overlay_text">
-        <div class="container"> 
-            <div class="top_home" style="margin-bottom: 0p;">
-            <div class="home_heading">
+<section>
+    <div class="overlay_text">
+      <div class="container" style="width: 100%; ">
+        <div class="top_home" style="margin-bottom: 0;">
+          <div class="home_heading">
             Our Methodology
-            </div>
-          <div class="home_heading_info">
-            <p>
-                Our methodology, outlined in a precise paper, drives our initiatives. Built on carbon emissions and digitalization, it powers our new carbon app, empowering users for sustainable choices.
-          </p>
           </div>
-          
-          
+          <div class="home_heading_info" style="width: 80%;">
+            <p style="text-align:left;">
+                Welcome to the inner workings of our carbon footprint calculator! We're excited to show you how we've put everything together.
+
+At the core of our calculator are trusted sources like Fremtiden i våre hender (The Future in Our Hands) and Statistics Norway (SSB). We've tapped into their data to fuel our calculator, ensuring reliability and accuracy in every calculation.
+<br><br>
+
+While we've gone into more detail in our paper, we've simplified things here to make it easy for you to follow along. Basically, we've gathered a bunch of numbers and formulas to estimate your carbon footprint.
+
+Our aim? To empower you to make greener choices and do your part for the planet. <br><br> <strong>You can read our paper by clicking the button below! </strong> So, let's take a peek behind the curtain and see how it all comes together!
+            </p>
+
+            <div class="demo_box">
+                <div class="btn_nav_demo">
+                    <a href="https://methodology24carbonapphvl.tiiny.site">Paper</a>
+                </div>
+            </div> 
+
+          </div>
         </div>
-        </div>
-      
+      </div>
     </div>
-
-  </div>
-</section> 
-
+  </section>
+  
+  
 <!-- Methodology -->
 <section class="section_body_methodology">
     <div class="container">
-
-        <div class="methodology" style="display:block;">
-            <h1 style="text-align:left;"> Our numbers and formulas</h1>
-            <p>
-              We are going to studty some \(\LaTeX ~ formulas\) that could be useful for our project:
-            </p> 
+  
+        <div class="methodology">
+            <h1 style="text-align:center; align-items: center; ">Our Formulas</h1>
         </div>
+  
+        <!-- First row with two boxes -->
+    <div class="methodology">
+        <div class="row">
+          <div class="box">
+            <h4>The General Formula:</h4>
+            \[\text{CO}_{2}=d*\frac{ef}{p}\]
+            <br>
+            In which:
+            \[\text{CO}_2 \text{ = carbon emissions in grams} \]
+            \[\text{d} \text{ = distance traveled in km} \]
+            \[\text{ef} \text{ = emission factor in CO}_2 \text{/km} \]
+            \[\text{p} \text{ = amount of passengers} \]</p>
+          </div>
+          <div class="box">
+            <h4>General Formula for Electric Vehicles:</h4>
+             \[ \text{Ef = x * Ec} \]
+                <br>
+                <br>
 
-        <!--Enumerated list (table with two columns)-->
-        <div class="methodology"> 
-            <div class="box_table2" style="height:200px;">
-                <ol start="1">
-                    <li>
-                        <h4>Mathematical expressions 1</h4>
-                        <p class="text-left">
-                            In progress.
-                            <br>
-                            x
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table2" style="height:200px;">
-                <ol start="2">
-                    <li>
-                        <h4>Mathematical expressions 2</h4>
-                        <p class="text-left">
-                            In progess.
-                            <br>
-                            x
-                        </p>
-                    </li>
-                </ol>
-            </div>  
+                In which:
+                \[\text{ef} \text{ = emission factor in gCO}_2 \text{/km} \]
+                \[\text{x} \text{ = the distance traveled in kilometers} \text{} \]
+                \[\text{ec} \text{ = emission factor in grams of gCO}_2 \text{/km} \]</p>
+          </div>
         </div>
-
-        <!--Enumerated list (table with two columns)-->
-        <div class="methodology"> 
-            <div class="box_table2" style="height:425px;">
-                <ol start="3">
-                    <li>
-                        <h4>Sums</h4>
-                        <p class="text-left">
-                            In progress.
-                            <br>
-                            x
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Products</h4>
-                        <p class="text-left">
-                            In progress.
-                            <br>
-                            x
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table2" style="height:425px;">
-                <ol start="5">
-                    <li>
-                        <h4>Limits</h4>
-                        <p class="text-left">
-                            In progress.
-                            <br>
-                            x
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Integrals</h4>
-                        <p class="text-left">
-                            In progress.
-                            <br>
-                            x
-                        </p>
-                    </li>
-                </ol>
-            </div>  
-        </div>
-
-        
-
-        <!--Enumerated list (table with one column)-->
-        <div class="methodology">              
-            <div class="box_table1">
-                      
-            </div>
-            <div class="box_table1">
-                <ol>
-                    <li>
-                        <h4>Buses</h4>
-                        <p class="text-left">
-                            x
-                            <br>
-                             x
-                            <br>
-                            Where:
-                            <ul style="text-align:left;">
-                                <li>x</li>
-                                <li>x</li>
-                                <li>x</li>
-                                <li>x </li>
-                            </ul>
-                            
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Cars</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Planes</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table1">
-                      
-            </div>  
-        </div>
-
-        
-      
+      </div>
+  
+      <div class="methodology" style="display:block;">
+        <h1 style="text-align:start;"> Our Numbers</h1>
+        <p>
+            Now that we have presented our general formula to our calculations, we now present the numbers we have
+            gathered through our research on the matter:
+        </p>
     </div>
+
+    <div class="methodology">
+        <div class="row">
+          <div class="box_table1">
+            <h3>FERRY</h3>
+            <p> Ferris contributes significantly to emissions. Norway has initiated a project named "to zero," aiming to implement fully electric ferries. However, presently, the ferries continue to operate on diesel. According to Fremtiden I Våre Hender, their emissions amount to <strong>226 grams of CO2 per passenger-kilometer.</strong></p>
+            <!-- Content for Ferry -->
+          </div>
+          <div class="box_table1">
+            <h3>CAR</h3>
+            <p>The Norwegian government's incentives have propelled electric vehicle sales, resulting in Norway leading globally in electric cars per capita. Emissions vary by car size, with <strong> electric cars averaging 4,943 g CO2/km </strong>. Despite electric car adoption, many gasoline and diesel cars remain in use, where <strong> emits 57.11 g CO2/km, and diesel emits 46.89 g CO2/km.</strong></p>
+            <!-- Content for Car -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="methodology">
+        <div class="row">
+          <div class="box_table1">
+            <h3>MOTORCYCLE</h3>
+            <p>Motorcycles, running on gasoline, are often seen as environmentally friendly due to their size and fuel efficiency. According to Fedoryshyn (2016),<strong> motorcycles emit 85.2g of CO2 per kilometer driven.</strong></p>
+            <!-- Content for Motorcycle -->
+          </div>
+          <div class="box_table1">
+            <h3>TRAIN</h3>
+            <p>As per VY's sustainability report for 2023, <strong> electric trains emit 10 grams of CO2 per person, whereas diesel-powered trains emit 91 grams of CO2 per kilometer.</strong> Our calculations are based on emissions data specific to Norway.</p>
+            <!-- Content for Train -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="methodology">
+        <div class="row">
+          <div class="box_table1">
+            <h3>BUS</h3>
+            <p>Our calculations for buses are derived from the same report used for trains, namely VY's sustainability report for 2023. According to this data, buses emit <strong>27 grams of CO2 per kilometer when powered by diesel</strong>, <strong>14 grams of CO2 per kilometer with biodiesel</strong>, and <strong>13 grams of CO2 per kilometer when electrically powered</strong>.</p>
+            <!-- Content for Bus -->
+          </div>
+          <div class="box_table1">
+            <h3>AIRPLANE</h3>
+            <p>When considering air travel, we classify flights by class: economy, economy premium, and business. Our main data source for CO2 emissions from airplanes is the "Klimasmart Semester" report. From this report, we derived an average emission rate for different classes, which we use in our calculations: <strong>197,667 g CO2 per kilometer</strong>.</p>
+            <!-- Content for Airplane -->
+          </div>
+        </div>
+      </div>
+      
+
+
+</div>
 </section>
+  
+  
 
 </body>
 </html>
+
+{% endblock content %}

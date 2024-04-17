@@ -1,13 +1,12 @@
-/*Container register header*/
-/*color=dark*/
 .register_section_css {
   display: flex;
-  background: #9fa7bf;
+  background: #f3f8f6;
+  height: 690px;
   }
   
   .register_section_css .container {
   display: flex;
-  background: #9fa7bf;
+  background: #f3f8f6;
   }
   
   .register_section_css .container {
@@ -38,7 +37,7 @@
   
   .register_section_css .container  .box:nth-of-type(2) {
     flex-grow:3;
-  background: #49736f;
+  background: #171f20;
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;

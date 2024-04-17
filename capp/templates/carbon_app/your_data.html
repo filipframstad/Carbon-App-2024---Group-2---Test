@@ -1,49 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Circular Menu</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
     <!-- New Entry Section -->
     <section class="main_menu">
       <div class="container">
           <div class="box">
 
           </div>
-          <div class="circular_menu"> 
-                
-                <div class="menu">
-                    <div class="toggle"><i class="fa-solid fa-plus"></i></div>
-                    <li style="--i:0">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_car')}}"><i class="fa-solid fa-car"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_bus')}}"><i class="fa-solid fa-bus"></i></a>
-                    </li>
-                    <li style="--i:2">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_plane')}}"><i class="fa-solid fa-plane"></i></a>
-                    </li>
-                    <li style="--i:3">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_ferry')}}"><i class="fa-solid fa-ship"></i></a>
-                    </li>
-                    <li style="--i:4">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_motorbike')}}"><i class="fa-solid fa-motorcycle"></i></a>
-                    </li>
-                    <li style="--i:5">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_bicycle')}}"><i class="fa-solid fa-bicycle"></i></a>
-                    </li>
-                    <li style="--i:6">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_bicycle')}}"><i class="fa-solid fa-person-walking"></i></a>
-                    </li>
-                    <li style="--i:7">
-                        <a class="btn_carbon_app_new_entry_main" href="{{url_for('carbon_app.new_entry_bicycle')}}"><i class="fa-solid fa-plus"></i></a>
-                    </li>
-                </div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-       
+          <div class="box"> 
+              <div class="container_buttons_links_main_menu">
+                  <div class="btn">
+                      <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="btn_carbon_app_new_entry_main">New Entry</a>
+                  </div>   
+              </div>        
           </div>
           <div class="box">
 
@@ -52,23 +21,6 @@
     </section> 
 
     <!-- Table Section -->
-    <section class="table_main">
-        <div class="container">
-            <div class="box">
-    
-            </div>
-            <div class="box">  
-                {{emissions_by_transport_python_dic}} 
-            </br>
-                {{emission_transport_python_list}}     
-            </br>
-                {{emissions_by_transport}}  
-            </div>
-            <div class="box">
-    
-            </div>
-        </div>
-    </section> 
  
     <!-- Two Emissions Graph Section -->
     <section class="two_emissions_graphs">
@@ -152,17 +104,13 @@
     <script>
         // Emissions
         let emission_transport_data = JSON.parse({{ emissions_by_transport | tojson }})    
-        Chart.scaleService.updateScaleDefaults('linear', {
-                ticks: {
-                    min: 0
-                }
-        });
+        Chart.scaleService.updateScaleDefaults('linear', {ticks: {min: 0}});
     
     
         let emissions_by_transport_chart = new Chart(emissions_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+                labels: ['Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
                     datasets: [{
                         data: emission_transport_data,
                         backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
@@ -227,7 +175,7 @@
         let kms_by_transport_chart = new Chart(kms_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+                labels: ['Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
                     datasets: [{
                         label: "Income Vs Expenses",
                         data: kms_transport_data,
@@ -283,15 +231,5 @@
             });   
 
         </script>
-        
-    <!-- Script Menu -->
-
-    <script>
-        let toggle = document.querySelector(".toggle");
-        let menu = document.querySelector(".menu");
-        toggle.onclick = function(){
-            menu.classList.toggle("active")
-        }
-      </script>
     {% endblock%}        
 {% endblock content %}

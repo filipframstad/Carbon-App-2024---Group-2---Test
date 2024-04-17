@@ -1,10 +1,10 @@
 .about-header {
-  background-color: #263336;
+  background-color: #171f20;
 }
 
 /* Section developers */
 .section_developers {
-  background-color:#263336;
+  background-color:#171f20;
   padding: 0;
   color: #fff;
 }
@@ -14,66 +14,27 @@
   font-size: 65px;
   font-weight: 600;
   line-height: 75px;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .developers {
   display: flex;  
-  align-items: start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 10px ;
-  background: #263336;
+  background: #171f20;
 }
 
-.developers .box {
-  flex: 1;
-  background: transparent;
-  color: #fff;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  height: auto;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-}
-.developers .box:nth-of-type(1) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(2) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(3) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(4){
-  flex-grow: 4;
-}
+.developers .box,
 .developers .box2 {
-  flex: 1;
+  flex-basis: calc(50% - 20px);
   background: transparent;
   color: #fff;
   border-radius: 10px;
-  margin: 10px 10px;
+  margin: 10px;
   padding: 15px 20px;
-  height: auto;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-}
-.developers .box2:nth-of-type(1) {
-  flex-grow:4;
-}
-.developers .box2:nth-of-type(2) {
-  flex-grow:4;
-}
-.developers .box2:nth-of-type(3) {
-  flex-grow:4;
-}
-.developers .box2:nth-of-type(4) {
-  flex-grow: 4;
+  text-align: center;
 }
 
 .section_container_buttons_developers {
@@ -86,7 +47,7 @@
 }
 
 .btn_developers {
-  padding: 10px 10px;
+  padding: 10px 20px;
   margin: 10px 10px 10px 10px;
   color: black;
   border-radius: 5px;
@@ -101,4 +62,27 @@
   background-color: #c5c8d9;
   border: 2px solid #c5c8d9;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .about-headline {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .developers .box,
+  .developers .box2 {
+    flex-basis: calc(100% - 20px);
+  }
+
+  .section_container_buttons_developers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn_developers {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 8px;
+  }
 }
