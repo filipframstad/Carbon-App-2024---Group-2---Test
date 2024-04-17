@@ -1,9 +1,4 @@
-/* Colors 
-Home, section 1 (head, background): #9fa7bf
-Home, section 1 (head, boxes): #568c63
-Home, section 2 (developers, background): #c5c8d9 
-Home, section 2 (developers, boxes): #49736f
- */
+
 
 /* Utilities  */
 
@@ -38,6 +33,7 @@ ul{
 }
 
 /* Navbar */
+
 .section_home_navbar {
   background-color: transparent;
 }
@@ -93,13 +89,14 @@ ul{
   flex-direction: row;
   align-items: center;
 }
-    .nav-right .btn_nav1 {
-      margin-right: 30px;
-    }
 
-    .nav-right .btn_nav_demo {
-      margin-right: 0;
-    }
+.nav-right .btn_nav1 {
+  margin-right: 30px;
+}
+
+.nav-right .btn_nav_demo {
+  margin-right: 0;
+}
 
 .btn_nav1 {
   display: flex;
@@ -154,9 +151,13 @@ ul{
   }
 
 .container-one{
-  height: 628px;
+  height: 728px;
   width: auto;
   padding-top: 60px;
+  margin-bottom: 300px;
+  background-color: #171f20; 
+  margin-left: -16px;
+  margin-right: -16px;
 }
 
   .lifestyle-image {
@@ -230,11 +231,13 @@ ul{
   color: #ffff;
 }
 
+
 /* Second section home*/
 
 .home-second-box {
   height: 700px;
   background-color: #c3d0d1;
+  margin-top: 300px;
 }
 
 .small-heading-home2 {

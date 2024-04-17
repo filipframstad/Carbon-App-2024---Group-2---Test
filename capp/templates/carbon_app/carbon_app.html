@@ -7,20 +7,22 @@
     
         <div class="header_carbon_app">
             <div class="box"> 
-            <h1 style="font-size:55px;"><span class="text-logo"> Carbon App Calculator</span></h1>
+            <div class="home_heading">
+              Carbon App Calculator
+            </div>
             <p style="text-align:left;">
                 As we now have presented our methodology in the last page, we now have taken use of our formulas. This with the purpose of giving you the opportunity to calculate your carbon emissions. Your carbon emissions depends on
                 your way of transport, and how long your travel was. Hope you like our app, enjoy!
             </p>
             <div class="container_buttons_links_header_carbon_app">
                 <div class="btn">
-                    <a href="{{url_for('methodology.methodology_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Methodology</a>
+                    <a href="{{url_for('methodology.methodology_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color: rgb(214, 61, 61);">Methodology</a>
                 </div>
                 <div class="btn">
-                    <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;", data-toggle="modal" data-target="#carbon_app_instructions">Instructions</a>
+                    <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color: rgb(214, 61, 61);", data-toggle="modal" data-target="#carbon_app_instructions">Instructions</a>
                 </div>
                 <div class="btn">
-                    <a href="{{url_for('carbon_app.your_data')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Your data</a>
+                    <a href="{{url_for('carbon_app.your_data')}}" class="btn btn-primary btn-lg mr-2", style="background-color: rgb(214, 61, 61);">Your data</a>
                 </div>
             </div>  
                 <!-- Modal Instructions -->
@@ -50,11 +52,6 @@
             </div>
             </div>
             <div class="box">
-            <img 
-                src="{{url_for('static', filename='icons/calculator.svg')}}"
-                width="325" 
-                height="325"
-                alt=""/>
             </div>
         </div>
         
