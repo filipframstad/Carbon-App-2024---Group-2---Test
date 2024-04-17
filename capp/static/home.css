@@ -119,6 +119,10 @@ ul{
 
 /* First Second home */
 
+.section_home{
+  background-color: #171f20;
+}
+
 .top_home {
   width: auto;
   height: auto;
@@ -132,6 +136,7 @@ ul{
   line-height: 75px;
   padding-top: 20px;
   padding-bottom: 10px;
+  background-color: #171f20;
 }
 
 .home_heading_info {
@@ -140,6 +145,7 @@ ul{
   font-weight: 300;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: #171f20;
 }
 
 .home_heading_info_more{
