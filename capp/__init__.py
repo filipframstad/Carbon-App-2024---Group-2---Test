@@ -24,10 +24,12 @@ from capp.methodology.routes import methodology
 from capp.carbon_app.routes import carbon_app
 from capp.users.routes import users
 from capp.about.routes import about
+from capp.your_data.routes import your_data
 
 application.register_blueprint(home)
 application.register_blueprint(methodology)
 application.register_blueprint(carbon_app)
 application.register_blueprint(users)
 application.register_blueprint(about)
+application.register_blueprint(your_data)
 

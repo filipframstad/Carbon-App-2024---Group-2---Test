@@ -28,6 +28,7 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+
       
 
       <!-- To activate media queries in devices -->
@@ -45,26 +46,30 @@
         
     </head>
     <body>
-        <section class="section_carbon_app_navbar">
-          <div class="container">
-            <div class="carbon_app_navbar1">
-              <div class="logo">
-                <a href="/">
-                <span class="text-logo">FOOTPRINT</span>
-                </a>
-              </div>
-              {% if current_user.is_authenticated %}
-                <div class="carbon_app_navbar_ul1">
-                    <ul>
-                      <li>
-                          <a href="{{url_for('carbon_app.carbon_app_home')}}">Product</a>
-                      </li>
-                      <li>
-                          <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
-                      </li>
-                      <li>
-                        <a href="{{url_for('about.about_home')}}">About</a>
-                      </li>
+     <section class="section_carbon_app_navbar">
+  <div class="container">
+    <div class="carbon_app_navbar1">
+      <div class="logo">
+        <a href="/">
+          <span class="text-logo">FOOTPRINT</span>
+        </a>
+      </div>
+      {% if current_user.is_authenticated %}
+      <div class="carbon_app_navbar_ul1">
+        <ul>
+          <li>
+            <a href="{{url_for('carbon_app.carbon_app_home')}}">Product</a>
+          </li>
+          <li>
+            <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+          </li>
+          <li>
+            <a href="{{url_for('about.about_home')}}">About</a>
+          </li> 
+          <li>
+            <a href="{{url_for('carbon_app.your_data')}}">Your Data</a>
+          </li>
+
                   </ul>
                 </div>
                       <div class="nav-right">
