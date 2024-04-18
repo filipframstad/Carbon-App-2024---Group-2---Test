@@ -159,42 +159,46 @@ ul{
     margin-right: 30px;
   }
 
-.container-one{
-  height: 628px;
-  width: auto;
-  padding-top: 60px;
-}
-
+  .container-one {
+    height: 628px;
+    width: auto;
+    padding-top: 60px;
+    position: relative;
+  }
+  
+  .emissions-card,
+  .impact-chart,
+  .category-card {
+    z-index: 30;
+    position: absolute;
+  }
+  
+  .emissions-card {
+    width: 320px;
+    top: 130px;
+    left: 50%; /* Adjusted left to center horizontally */
+    transform: translateX(-50%);
+  }
+  
+  .impact-chart {
+    width: 461px;
+    top: 280px;
+    left: 20%; /* Adjusted left to center horizontally */
+    transform: translateX(-50%);
+  }
+  
+  .category-card {
+    width: 313px;
+    top: 304px;
+    left: 70%; /* Adjusted left to center horizontally */
+    transform: translateX(-50%);
+  }
+  
   .lifestyle-image {
     width: 450px;
   }
-
-  .emissions-card {
-    width: 320px;
-    z-index: 30;
-    position: absolute;
-    top: 896px;
-    left: 539px;
-    right: auto;
-  }
-
-  .impact-chart {
-    width: 461px;
-    z-index: 40;
-    position: absolute;
-    top: 621px;
-    left: 672px;
-    right: auto;
-  }
-
-  .category-card {
-    width: 313px ;
-    z-index: 50;
-    position: absolute;
-    top: 834px;
-    left: 883px;
-    right: auto;
-  }
+  
+  
 
   .container-home-two {
     grid-column-gap: 16px;
@@ -240,7 +244,7 @@ ul{
 
 .home-second-box {
   height: auto;
-  background-color: #c3d0d1;
+  background-color: #e7f0f1;
   display: block;
   padding-bottom: 50px;
 }
@@ -448,5 +452,19 @@ ul{
     width: 90%;
     text-align: center;
   }
+  .emissions-card,
+  .impact-chart,
+  .category-card,
+  .lifestyle-image,
+  .bus-picture {
+    display: none; /* Hide the pictures */
+  }
+  .home_heading,
+  .big-heading-home2 {
+    font-size: 30px;
+    text-align: left;
+    line-height: 35px;
+  }
+
 }
 
